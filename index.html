@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8' />
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5'
+  name='viewport' />
+<meta content='IE=edge' http-equiv='X-UA-Compatible' />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sono:wght@600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+
+<head>
+  <title>Ngajak jalan Manusia Favorit aku</title>
+  <meta name="description" content="HTML Replit Coding">
+
+</head>
+
+<body>
+
+  <audio src="https://feeldreams.github.io/hbdm.mp3" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <img src="lia.jpeg" id="wallpaper" />
+  </div>
+
+  <div id='Content'>
+
+    <div id="ftAwal">
+      <img src="https://feeldreams.github.io/pandakuning.gif" id="ftoAwal" />
+    </div>
+
+    <div id="loveIn">
+      <label class='lovein'>❤️</label>
+    </div>
+    <p id="ket">Klik icon Love nya yaaa sayaang!</p>
+
+    <div class="kumpulanstiker">
+      <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker" />
+      <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1" />
+      <img src="https://feeldreams.github.io/peachlove.gif" id="fotostiker2" />
+      <img src="https://feeldreams.github.io/peachheart.gif" id="fotostiker3" />
+      <img src="https://feeldreams.github.io/peachbunga2.gif" id="fotostiker4" />
+      <img src="https://feeldreams.github.io/pandakuning.gif" id="fotostiker5" />
+    </div>
+
+    <div>
+      <blockquote id='bq' data-text='🌈'>
+        <p id="halo" class="halo"></p>
+        <p id="kalimat">Aku punya satu pertanyaan buat kmu 🤭</p>
+        <p id="pesan0">Kalau seseorang ngajak kmu pergi besok...</p>
+        <p id="pesan1">Orangnya udah kmu kenal</p>
+        <p id="pesan2">kira-kira kmu bakal ikut nggak?</p>
+        <p id="pesan3">Temenin dia di hari yang spesial buat dia</p>
+        <p id="pesan4">Klik 3 LOVE dulu, baru kita lanjut 😆</p>
+        <div id="kolombaru">
+          <li id="lv1">🤍</li>
+          <li id="lv2">🤍</li>
+          <li id="lv3">🤍</li>
+        </div>
+        <p id="pesan5">Jadi... mau ga nemenin aku jalan besok? 🤭✨</p>
+        <p id="pesan6">Yeay! Makasih Sayaaang &gt;&lt;</p>
+        <p id="pesan7" class="gaya2">Yaudah segitu dulu ajakannya 🤭 Jangan lupa kasih jawabannya ke aku lewat WhatsApp
+          yaa sayaang❤️</p>
+
+        <p id="opsL">Klik untuk Lanjut</p>
+      </blockquote>
+    </div>
+
+    <div id="Tombol">
+      <a id="By">Mau!</a>
+      <a id="Bn">Gamau</a>
+    </div>
+
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="https://feeldreams.github.io/peachsad1.gif" />
+      <p id="kataditolak">Yah.. Kenapa yaaang :(</p>
+    </div>
+
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    audio = new Audio('' + linkmp3.src);
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-snowflake";
+      heart.style.left = (Math.random() * 90) + "vw";
+      heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+      body.appendChild(heart);
+    }
+    setInterval(function name(params) {
+      var heartArr = document.querySelectorAll(".fa-snowflake");
+      if (heartArr.length > 100) {
+        heartArr[0].remove()
+      }
+    }, 100);
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: '#FF0040',
+      imageHeight: 80,
+    });
+
+    async function inipesan() {
+      vketikhalo = "Hai, Manusia Favorit Aku ✨";
+      mulainama();
+    }
+
+    async function menuju() {
+      pesanwhatsapp = "Iyaa Aku mau";
+      await swals.fire('OKE!', 'Kirim jawabannya ke WhatsApp aku, ya sayaang!', 'success');
+      window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
